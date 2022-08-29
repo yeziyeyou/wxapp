@@ -6,7 +6,12 @@ FROM maven:3.6.0-jdk-8-slim as build
 WORKDIR /app
 
 # 将src目录下所有文件，拷贝到工作目录中src目录下（.gitignore/.dockerignore中文件除外）
-COPY src /app/src
+COPY ruoyi-admin /app/ruoyi-admin
+COPY ruoyi-common /app/ruoyi-common
+COPY ruoyi-framework /app/ruoyi-framework
+COPY ruoyi-generator /app/ruoyi-generator
+COPY ruoyi-quartz /app/ruoyi-quartz
+COPY ruoyi-system /app/ruoyi-system
 
 # 将pom.xml文件，拷贝到工作目录下
 COPY settings.xml pom.xml /app/

@@ -1,0 +1,10 @@
+wechat:
+  app:
+    id: wx353ba8466e75073b
+    secret: 1eab228976f7dab2b17316205cbbdd7c
+  server:
+    url: https://api.weixin.qq.com/
+
+  api:
+    #小程序登录
+    jscode2session: ${wechat.server.url}sns/jscode2session?appid={appid}&secret={secret}&js_code={js_code}&grant_type=authorization_code
